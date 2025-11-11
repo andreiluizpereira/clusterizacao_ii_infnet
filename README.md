@@ -3,9 +3,47 @@
 Projeto da Disciplina Algoritmos de Inteligência Artificial para clusterização - INFNET <br>
 Professor: Gesiel Rios Lopes
 
+## Requisitos
+Python 3.13.7 ou superior
+
+## Como baixar e executar o projeto no `Windows`
+Clone o repositório para seu computador e acesse a pasta:
+```powershell
+git clone https://github.com/andreiluizpereira/clusterizacao_i_infnet.git
+cd clusterizacao_i_infnet
+```
+
+Crie um ambiente virtual:
+```powershell
+python -m venv .venv
+```
+
+Ative o ambiente virtual:
+```powershell
+.venv/Scripts/activate
+```
+
+Baixe as dependências do projeto:
+```powershell
+pip install -r requirements.txt
+```
+
+Executar o projeto no Jupyter:
+```powershell
+jupyter notebook pd.ipynb
+```
+
+Executar o projeto no VSCode:  
+- Use o atalho **Ctrl + Shift + P** → digite **"Run All"** → selecione **"Notebook: Run All"**  
+- Ou clique no botão **"Run All" (▶▶)** na barra superior do notebook  
+- Ou use **Shift + Enter** para executar célula por célula  
+
+
+# Instruções do projeto
+
 Chegamos no final da nossa disciplina e hora de validar nosso conhecimento. As questões teóricas podem ser respondidas em slides ou doc em formato .PDF e devem ser disponibilizadas junto com o código (ver questão 6). 
 
-O trabalho está dividido em 4 partes, como você pode observar a seguir
+O trabalho está dividido em 4 partes, como você pode observar a seguir:
 
 ## Parte 1 - Infraestrutura
 
