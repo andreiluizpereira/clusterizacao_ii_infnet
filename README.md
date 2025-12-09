@@ -1,6 +1,6 @@
-# Algoritmos de Inteligência Artificial para clusterização - INFNET
+# Validação de modelos de clusterizaçã - INFNET
 
-Projeto da Disciplina Algoritmos de Inteligência Artificial para clusterização - INFNET <br>
+Projeto da Disciplina Validação de modelos de clusterizaçã - INFNET <br>
 Professor: Gesiel Rios Lopes
 
 ## Requisitos
@@ -9,7 +9,7 @@ Python 3.13.7 ou superior
 ## Como baixar e executar o projeto no `Windows`
 Clone o repositório para seu computador e acesse a pasta:
 ```powershell
-git clone https://github.com/andreiluizpereira/clusterizacao_i_infnet.git
+git clone https://github.com/andreiluizpereira/clusterizacao_ii_infnet.git
 cd clusterizacao_i_infnet
 ```
 
@@ -41,13 +41,12 @@ Executar o projeto no VSCode:
 
 # Instruções do projeto
 
-Chegamos no final da nossa disciplina e hora de validar nosso conhecimento. As questões teóricas podem ser respondidas em slides ou doc em formato .PDF e devem ser disponibilizadas junto com o código (ver questão 6). 
+Chegamos na hora de validar nosso conhecimento. As questões teóricas podem ser respondidas em slides ou doc em formato .PDF e devem ser disponibilizadas junto com o código (ver questão 6).
 
-O trabalho está dividido em 4 partes, como você pode observar a seguir:
+O trabalho está dividido em 4 partes, como você pode observar a seguir.
 
-## Parte 1 - Infraestrutura
-
-Para as questões a seguir, você deverá executar códigos em um notebook Jupyter, rodando em ambiente local, certifique-se que:
+## Infraestrutura
+Para as questões a seguir, você deverá executar códigos em um notebook Jupyter, rodando em ambiente local, certifique-se que:  
 
 1. Você está rodando em Python 3.9+
 2. Você está usando um ambiente virtual: Virtualenv ou Anaconda
@@ -55,42 +54,29 @@ Para as questões a seguir, você deverá executar códigos em um notebook Jupyt
 4. Gere um arquivo de requerimentos (requirements.txt) com os pacotes necessários. É necessário se certificar que a versão do pacote está disponibilizada.
 5. Tire um printscreen do ambiente que será usado rodando em sua máquina.
 6. Disponibilize os códigos gerados, assim como os artefatos acessórios (requirements.txt) e instruções em um repositório GIT público. (se isso não for feito, o diretório com esses arquivos deverá ser enviado compactado no moodle).
+Dica: Gere um relatório rico em gráficos que dêem respaldo aos resultados
 
-## Parte 2 - Escolha de base de dados
-
+## Escolha de base de dados
 Para as questões a seguir, usaremos uma base de dados e faremos a análise exploratória dos dados, antes da clusterização.
 
-1. Baixe os dados disponibilizados na plataforma Kaggle sobre dados sócio-econômicos e de saúde que determinam o índice de desenvolvimento de um país. Esses dados estão disponibilizados através do link: https://www.kaggle.com/datasets/rohan0301/unsupervised-learning-on-country-data
-2. Quantos países existem no dataset?
+1. Escolha uma base de dados para realizar o trabalho. Essa base será usada em um problema de clusterização.
+2. Escreva a justificativa para a escolha de dados, dando sua motivação e objetivos.
 3. Mostre através de gráficos a faixa dinâmica das variáveis que serão usadas nas tarefas de clusterização. Analise os resultados mostrados. O que deve ser feito com os dados antes da etapa de clusterização?
-4. Realize o pré-processamento adequado dos dados.
+4. Realize o pré-processamento adequado dos dados. Descreva os passos necessários.  
 
-## Parte 3 - Clusterização
+## Clusterização
+Para os dados pré-processados da etapa anterior você irá:
 
-Para os dados pré-processados da etapa anterior, você irá:
+1. Realizar o agrupamento dos dados, escolhendo o número ótimo de clusters. Para tal, use o índice de silhueta e as técnicas:
+a. K-Médias
+b. DBScan
+2. Com os resultados em mão, descreva o processo de mensuração do índice de silhueta. Mostre o gráfico e justifique o número de clusters escolhidos.
+3. Compare os dois resultados, aponte as semelhanças e diferenças e interprete.
+4. Escolha mais duas medidas de validação para comparar com o índice de silhueta e analise os resultados encontrados. Observe, para a escolha, medidas adequadas aos algoritmos.
+5. Realizando a análise, responda: A silhueta é um o índice indicado para escolher o número de clusters para o algoritmo de DBScan?  
 
-1. **Realizar o agrupamento dos países em 3 grupos distintos.**  
-   Para tal, use:
-   - **a.** K-Médias  
-   - **b.** Clusterização Hierárquica  
-
-2. **Para os resultados do K-Médias:**
-   a. Interprete cada um dos clusters obtidos citando:  
-      i. Qual a distribuição das dimensões em cada grupo  
-      ii. O país que, de acordo com o algoritmo, melhor representa o seu agrupamento. Justifique.  
-
-3. **Para os resultados da Clusterização Hierárquica,** apresente o dendrograma e interprete os resultados.
-
-4. **Compare os dois resultados,** aponte as semelhanças e diferenças e interprete.
-
-## Parte 4 - Escolha de algoritmos
-
-1. Escreva em tópicos as etapas do algoritmo de K-médias até sua convergência.
-2. O algoritmo de K-médias converge até encontrar os centróides que melhor descrevem os clusters encontrados (até o deslocamento entre as interações dos centróides ser mínimo). Lembrando que o centróide é o baricentro do cluster em questão e não representa, em via de regra, um dado existente na base. Refaça o algoritmo apresentado na questão 1 a fim de garantir que o cluster seja representado pelo dado mais próximo ao seu baricentro em todas as iterações do algoritmo.
-Obs: nesse novo algoritmo, o dado escolhido será chamado medóide.
-3. O algoritmo de K-médias é sensível a outliers nos dados. Explique.
-4. Por que o algoritmo de DBScan é mais robusto à presença de outliers?
-   
-Assim que terminar, salve o seu arquivo PDF e poste no Moodle. Utilize o seu nome para nomear o arquivo, identificando também a disciplina no seguinte formato: “nomedoaluno_nomedadisciplina_pd.PDF”.
-
-Boa sorte!
+## Medidas de similaridade
+1. Um determinado problema, apresenta 10 séries temporais distintas. Gostaríamos de agrupá-las em 3 grupos, de acordo com um critério de similaridade, baseado no valor máximo de correlação cruzada entre elas. Descreva em tópicos todos os passos necessários.
+2. Para o problema da questão anterior, indique qual algoritmo de clusterização você usaria. Justifique.
+3. Indique um caso de uso para essa solução projetada.
+4. Sugira outra estratégia para medir a similaridade entre séries temporais. Descreva em tópicos os passos necessários.
