@@ -1,6 +1,6 @@
 # Validação de modelos de clusterização - INFNET
 
-Projeto da Disciplina Validação de modelos de clusterizaçã - INFNET <br>
+Projeto da Disciplina Validação de modelos de clusterização - INFNET <br>
 Professor: Gesiel Rios Lopes
 
 ## Requisitos
